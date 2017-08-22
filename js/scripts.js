@@ -16,8 +16,7 @@ $(document).ready(function() {
     var inputtedNotes = $("input#new-notes").val();
 
     var newPlace = new Place(inputtedLocation, inputtedLandmarks, inputtedTimeOfYear, inputtedNotes);
-    alert(inputtedTimeOfYear)
-    console.log(newPlace)
+
     $("ul#places").append("<li><span class='place'>" + newPlace.location + "</span></li>");
 
     $(".place").last().click(function() {
@@ -28,7 +27,9 @@ $(document).ready(function() {
       $(".notes").text(newPlace.notes);
     });
 
-  //  $("input#new-first-name").val("");
-  //  $("input#new-last-name").val("");
+   $("input#new-location").val("");
+   $("input#new-landmarks").val("");
+   $("input#new-time-of-year").val("");
+   $("input#new-notes").val("");
   });
 });
